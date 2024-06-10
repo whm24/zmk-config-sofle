@@ -11,7 +11,6 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
-#define ADJUST 3
 
 / {
     keymap {
@@ -33,7 +32,7 @@
                         &kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &mo 1   &kp RET       &kp SPACE         &mo 2   &kp RIGHT_ALT  &kp RIGHT_WIN  &kp RIGHT_CONTROL
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
         lower_layer {
@@ -53,8 +52,7 @@
                       &trans     &trans       &trans    &trans     &trans    &trans  &trans     &trans    &trans           &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
-        };
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
         raise_layer {
             // ------------------------------------------------------------------------------------------------------------
@@ -72,14 +70,7 @@
                           &trans        &trans        &trans        &trans        &trans    &trans  &trans     &trans    &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
-
-        // ------------------------------------------------------------------------------------------------------------
-        // |BTCLR | BT1   | BT2   |  BT3  |  BT4  |  BT5  |                |      |      |       |      |       |       |
-        // |EXTPWR|RGB_HUD|RGB_HUI|RGB_SAD|RGB_SAI|RGB_EFF|                |      |      |       |      |       |       |
-        // |      |RGB_BRD|RGB_BRI|       |       |       |                |      |      |       |      |       |       |
-        // |      |       |       |       |       |       |RGB_TOG| |      |      |      |       |      |       |       |
-        //                |       |       |       |       |       | |      |      |      |       |      |
     };
 };
